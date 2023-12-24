@@ -58,7 +58,7 @@ function putStoriesOnPage() {
 
   $allStoriesList.show();
 }
-navUserProfile //Why is this here?
+navUserProfile
 
 // Source:https://stackoverflow.com/questions/43231125/how-to-i-call-a-function-when-form-submit
 function submitStory(e) {
@@ -92,21 +92,6 @@ its been deleted.
 // Sources:
 // https://www.w3schools.com/js/js_jquery_dom.asp
 // https://rapidapi.com/guides/delete-requests-axios
-// function removeStory(storyId){
-  // Remove Story through id
- // Original: $("#story-name").remove();
-//   $(`#{storyId}`).remove();
-//   /* Use axios to make HTTP DELETE request to the API endpoint that handles story 
-   // deletion to inform the API that a story has been deleted.  */
-    // axios.delete(`${BASE_URL}/posts/${storyId}`)
-//     axios.delete(`${BASE_URL}/api/v3/mappings/${storyId}`)
-//     .then(response => {
-//       console.log(`Successfully deleted post with ID ${storyId}`);
-//     })
-//     .catch(error => {
-//       console.error('Error: ', error.message);
-//     });  
-// }
 
 function removeFavoriteStory(username,storyId){
   fetch(`https://hack-or-snooze-v3.herokuapp.com/users/${username}/favorites/${storyId}`, {

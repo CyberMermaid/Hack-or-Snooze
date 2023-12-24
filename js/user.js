@@ -122,21 +122,6 @@ function updateUIOnUserLogin() {
 * - should be defined in the User class. 
 */
 
-
-
-// function addFavoriteStory(storyId)
-// {
-//   let story = storyList.find(story => story.id === storyId);
-//   story.favorite = !story.favorite;
-
-//   if (story.favorite) {
-     // push story into currentUser's array of storyList
-//     currentUser.storyList.push(story);
-//   } else {
-//     let index = currentUser.storyList.indexOf(story);
-//     currentUser.storyList.splice(index, 1);
-//   }
-// }
 // https://hackorsnoozev3.docs.apiary.io/#reference/0/user-favorites/add-a-new-favorite?console=1
 function addFavoriteStory(username,storyId){
   fetch(`https://hack-or-snooze-v3.herokuapp.com/users/${username}/favorites/${storyId}`, {
@@ -154,15 +139,3 @@ $('#all-stories-list').on('click', function() {
   let story = storyList.find(story => story.id === storyId);
   addFavoriteStory(currentUser.username, story.id);
  });
- 
-// https://teamtreehouse.com/community/how-to-create-an-upvotedownvote-button-using-javascriptor-anything-for-that-matter 
-// https://stackoverflow.com/questions/11075007/working-with-data-in-jquery
-// https://forums.phpfreaks.com/topic/163209-onclick-favoriteunfavorite-with-ajax/
-// https://stackoverflow.com/questions/61881098/how-to-keep-favorite-unfavorite-button-color-after-page-reload
-
-// add the feature to mark/unmark a story as favorite javascript
-// function markFavoriteStory{
-
-// https://codepen.io/bennettfeely/pen/bGEpVv
-// https://codereview.stackexchange.com/questions/133669/upvote-downvote-toggle
-// }
